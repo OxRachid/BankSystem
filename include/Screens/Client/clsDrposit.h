@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "clsEnputValidate.h"
-#include "clsScreen.h"
-#include "clsBankClient.h"
+#include "../../Lib/clsEnputValidate.h"
+#include "../clsScreen.h"
+#include "../../Core/clsBankClient.h"
 using namespace std;
 
 class clsDrposit : protected clsScreen {
