@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "clsEnputValidate.h"
-#include "clsScreen.h"
-#include "clsBankUsers.h"
+#include "../../Lib/clsEnputValidate.h"
+#include "../clsScreen.h"
+#include "../../Core/clsBankUsers.h"
 using namespace std;
 
 class clsUpdateUser : protected clsScreen {
