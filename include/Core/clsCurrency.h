@@ -3,9 +3,9 @@
 #include <string>
 #include <fstream>
 #include "clsPerson.h"
-#include "clsString.h"
-#include "clsEnputValidate.h"
-#include "clsUtil.h"
+#include "../Lib/clsString.h"
+#include "../Lib/clsEnputValidate.h"
+#include "../Lib/clsUtil.h"
 using namespace std;
 
 // Define the name of file where we will store client data
