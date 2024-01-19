@@ -3,9 +3,9 @@
 #include <string>
 #include <fstream>
 #include "clsPerson.h"
-#include "clsString.h"
-#include "clsEnputValidate.h"
-#include "clsUtil.h"
+#include "../Lib/clsString.h"
+#include "../Lib/clsEnputValidate.h"
+#include "../Lib/clsUtil.h"
 #include "clsBankUsers.h"
 using namespace std;
 
