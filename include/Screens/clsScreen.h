@@ -2,8 +2,8 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "clsBankUsers.h"
-#include "Global.h"
+#include "../Core/clsBankUsers.h"
+#include "../Core/Global.h"
 using namespace std;
 
 class clsScreen{
