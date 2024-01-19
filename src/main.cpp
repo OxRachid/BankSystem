@@ -6,9 +6,7 @@
 #include <iomanip>
 #include <chrono>
 #include <thread>
-#include "include/Screens/clsMainScreen.h"
-#include "clsBankLogin.h"
-#include "clsCurrency.h"
+#include "../include/Screens/User/clsBankLogin.h"
 using namespace std;
 	
 	
