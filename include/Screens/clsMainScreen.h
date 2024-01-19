@@ -2,19 +2,20 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "clsEnputValidate.h"
+#include "../Lib/clsEnputValidate.h"
 #include "clsScreen.h"
-#include "clsAddNewClient.h"
-#include "clsDeleteClient.h"
-#include "clsUpdateClient.h"
-#include "clsClientsList.h"
-#include "clsFindClient.h"
-#include "clsTransactionMenuScreen.h"
-#include "clsManageUsers.h"
-#include "clsRegisterLogInScreen.h"
-#include "clsCurrencyMainScreen.h"
-#include "Global.h"
+#include "Client/clsAddNewClient.h"
+#include "Client/clsDeleteClient.h"
+#include "Client/clsUpdateClient.h"
+#include "Client/clsClientsList.h"
+#include "Client/clsFindClient.h"
+#include "Client/clsTransactionMenuScreen.h"
+#include "User/clsManageUsers.h"
+#include "User/clsRegisterLogInScreen.h"
+#include "Currencies/clsCurrencyMainScreen.h"
+#include "../Core/Global.h"
 using namespace std;
+
 
 class clsMainScreen : protected clsScreen {
 
