@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "clsString.h"
-#include "clsEnputValidate.h"
-#include "clsUtil.h"
+#include "../Lib/clsString.h"
+#include "../Lib/clsEnputValidate.h"
+#include "../Lib/clsUtil.h"
 #include "clsPerson.h"
 using namespace std;
 
