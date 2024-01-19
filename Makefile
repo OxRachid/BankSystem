@@ -11,7 +11,6 @@ CXXFLAGS := -Wall
 SOURCE := src/main.cpp
 SOURCE += $(wildcard include/Core/*.h)
 SOURCE += $(wildcard include/Lib/*.h)
-SOURCE += $(wildcard include/Files/*.txt)
 SOURCE += $(wildcard include/Screens/*.h)
 SOURCE += $(wildcard include/Screens/Client/*.h)
 SOURCE += $(wildcard include/Screens/User/*.h)
@@ -21,6 +20,7 @@ SOURCE += $(wildcard include/Screens/Currensies/*.h)
 # Object files
 OBJECTS := $(patsubst %.cpp, %.o, $(SOURCE))
 OBJECTS += $(patsubst %.h, %.o, $(SOURCE))
+OBJECTS += $(patsubst %.txt, %.o, $(SOURCE))
 
 # Executable name
 EXECUTABLE := myprogram
