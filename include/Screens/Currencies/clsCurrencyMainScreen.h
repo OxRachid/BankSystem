@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "clsEnputValidate.h"
-#include "clsScreen.h"
+#include "../../Lib/clsEnputValidate.h"
+#include "../clsScreen.h"
 #include "clsCurrenciesList.h"
 #include "clsFindCurrency.h"
 #include "clsUpdateCurrencyRate.h"
