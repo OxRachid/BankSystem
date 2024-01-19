@@ -1,11 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "clsEnputValidate.h"
-#include "clsScreen.h"
-#include "clsBankUsers.h"
-#include "clsMainScreen.h"
-#include "Global.h"
+#include "../../Lib/clsEnputValidate.h"
+#include "../clsScreen.h"
+#include "../../Core/clsBankUsers.h"
+#include "../clsMainScreen.h"
+#include "../../Core/Global.h"
 using namespace std;
 
 class clsBankLogin : protected clsScreen {
