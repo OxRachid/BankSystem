@@ -9,9 +9,9 @@
 using namespace std;
 
 // Define the name of file where we will store data
-const string UsersFile = "../Files/UsersFile.txt";
+const string UsersFile = "UsersFile.txt";
 // Define the name of file where 1 will store logins data
-const string RegisterLogInFile = "../Files/RegisterLogInFile.txt";
+const string RegisterLogInFile = "RegisterLogInFile.txt";
 
 class clsBankUsers : public clsPerson  {
 
