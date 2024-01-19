@@ -55,7 +55,6 @@ private :
 				CurrentUser=clsBankUsers::FindUser(Username,Password);
 				// here we check if this object is empty or not
 				LoginSucceed=CurrentUser.isEmpty();
-			    LoginSucceed=false;
 		} while (LoginSucceed);
 		
 		// Register login in file
