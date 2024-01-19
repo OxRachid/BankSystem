@@ -1,10 +1,10 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "clsEnputValidate.h"
-#include "clsScreen.h"
-#include "clsBankClient.h"
-#include "clsString.h"
+#include "../../Lib/clsEnputValidate.h"
+#include "../clsScreen.h"
+#include "../../Core/clsBankClient.h"
+#include "../../Lib/clsString.h"
 using namespace std;
 
 class clsDeleteClient : protected clsScreen {
