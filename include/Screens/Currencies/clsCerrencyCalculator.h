@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "clsEnputValidate.h"
-#include "clsScreen.h"
-#include "clsCurrency.h"
+#include "../../Lib/clsEnputValidate.h"
+#include "../clsScreen.h"
+#include "../../Core/clsCurrency.h"
 using namespace std;
 
 class clsCerrencyCalculator : protected clsScreen {
