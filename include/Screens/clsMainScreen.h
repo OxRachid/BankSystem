@@ -2,20 +2,19 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "../Lib/clsEnputValidate.h"
+#include "clsEnputValidate.h"
 #include "clsScreen.h"
-#include "Client/clsAddNewClient.h"
-#include "Client/clsDeleteClient.h"
-#include "Client/clsUpdateClient.h"
-#include "Client/clsClientsList.h"
-#include "Client/clsFindClient.h"
-#include "Client/clsTransactionMenuScreen.h"
-#include "User/clsManageUsers.h"
-#include "User/clsRegisterLogInScreen.h"
-#include "Currencies/clsCurrencyMainScreen.h"
-#include "../Core/Global.h"
+#include "clsAddNewClient.h"
+#include "clsDeleteClient.h"
+#include "clsUpdateClient.h"
+#include "clsClientsList.h"
+#include "clsFindClient.h"
+#include "clsTransactionMenuScreen.h"
+#include "clsManageUsers.h"
+#include "clsRegisterLogInScreen.h"
+#include "clsCurrencyMainScreen.h"
+#include "Global.h"
 using namespace std;
-
 
 class clsMainScreen : protected clsScreen {
 
@@ -35,8 +34,12 @@ private :
 	// Go back to Main Menu screen
 	static void _GoBackToMainMenu()
 	{
-		cout<<endl;
-		system("pause");
+	  // this is a trick to force the terminal to pause until the user decide when to continue
+    cout << "Enter any character to continue..." << std::endl;
+    char x ;
+    cin>>x;
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		ShowMainMenu();
 	}
 	

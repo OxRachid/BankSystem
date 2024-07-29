@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../clsScreen.h"
-#include "../../Core/clsBankClient.h"
-#include "../../Core/Global.h"
+#include "clsScreen.h"
+#include "clsBankClient.h"
+#include "Global.h"
 using namespace std;
 
 class clsRegisterLogInScreen : protected clsScreen {

@@ -1,11 +1,11 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../../Lib/clsEnputValidate.h"
-#include "../clsScreen.h"
-#include "../../Core/clsBankUsers.h"
-#include "../clsMainScreen.h"
-#include "../../Core/Global.h"
+#include "clsEnputValidate.h"
+#include "clsScreen.h"
+#include "clsBankUsers.h"
+#include "clsMainScreen.h"
+#include "Global.h"
 using namespace std;
 
 class clsBankLogin : protected clsScreen {
@@ -55,6 +55,7 @@ private :
 				CurrentUser=clsBankUsers::FindUser(Username,Password);
 				// here we check if this object is empty or not
 				LoginSucceed=CurrentUser.isEmpty();
+			
 		} while (LoginSucceed);
 		
 		// Register login in file

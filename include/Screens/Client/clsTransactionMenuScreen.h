@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../../Lib/clsEnputValidate.h"
-#include "../clsScreen.h"
-#include "../../Core/clsBankClient.h"
+#include "clsEnputValidate.h"
+#include "clsScreen.h"
+#include "clsBankClient.h"
 #include "clsDrposit.h"
 #include "clsWithdraw.h"
 #include "clsPrintTotalBalances.h"
@@ -28,7 +28,7 @@ private :
 	static void _GoBackToTransactionMenu()
 	{
 		cout<<endl;
-		system("pause");
+		cin.get();
 		TransactionMenu();
 	}
 	
@@ -113,7 +113,7 @@ public :
 		// Check access permission
 		if (!clsScreen::CheckAccess(clsBankUsers::enPermissions::pTranactions))
 		{
-			system("pause");
+			cin.get();
 			return;
 		}
 		

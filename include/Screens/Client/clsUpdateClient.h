@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../../Lib/clsEnputValidate.h"
-#include "../clsScreen.h"
-#include "../../Core/clsBankClient.h"
+#include "clsEnputValidate.h"
+#include "clsScreen.h"
+#include "clsBankClient.h"
 using namespace std;
 
 class clsUpdateClient : protected clsScreen {
@@ -183,6 +183,12 @@ public :
 			case clsBankClient::eSaveResult::e_SaveFailed :
 			{
 				clsScreen::PrintMessage("Update Failed √");
+				break;
+			}
+			// Just temprary
+			case clsBankClient::eSaveResult::e_AccountAlreadyExsist :
+			{
+				clsScreen::PrintMessage(" Failed √");
 				break;
 			}
 		}

@@ -3,16 +3,16 @@
 #include <string>
 #include <fstream>
 #include "clsPerson.h"
-#include "../Lib/clsString.h"
-#include "../Lib/clsEnputValidate.h"
-#include "../Lib/clsUtil.h"
+#include "clsString.h"
+#include "clsEnputValidate.h"
+#include "clsUtil.h"
 #include "clsBankUsers.h"
 using namespace std;
 
 // Define the name of file where we will store client data
-const string ClientFile="ClientFile.txt";
+const string ClientFile="data/ClientFile.txt";
 // Define the name of file where we will store transfer register data
-const string TransferRegisterFile="TransferRegisterFile.txt";
+const string TransferRegisterFile="data/TransferRegisterFile.txt";
 
 class clsBankClient : public clsPerson {
 private :

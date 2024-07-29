@@ -2,8 +2,8 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include "../Core/clsBankUsers.h"
-#include "../Core/Global.h"
+#include "clsBankUsers.h"
+#include "Global.h"
 using namespace std;
 
 class clsScreen{
@@ -13,7 +13,7 @@ protected:
 	// Header screen
 	static void headrScreen(string Title, string Subtitle="",  bool ScreenWithOptions=false )
 	{
-		system("cls");
+		system("clear");
 		
 		cout << "               ┌" << "                    " << "┐" << endl;
 		cout << "                  "<<Title<<endl;
@@ -79,7 +79,7 @@ protected:
 	{
 		if ( !CurrentUser.CheckPermissions(Permission) )
 		{
-			system("cls");
+			system("clear");
 			cout << "    ┌" << "                                          " << "┐" << endl;
 			cout << "      Access denied , pleae contact your Admin " << endl;
 			cout << "    └" << "                                          " << "┘" << endl << endl;

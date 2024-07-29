@@ -2,16 +2,16 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "../Lib/clsString.h"
-#include "../Lib/clsEnputValidate.h"
-#include "../Lib/clsUtil.h"
+#include "clsString.h"
+#include "clsEnputValidate.h"
+#include "clsUtil.h"
 #include "clsPerson.h"
 using namespace std;
 
 // Define the name of file where we will store data
-const string UsersFile = "UsersFile.txt";
+const string UsersFile = "data/UsersFile.txt";
 // Define the name of file where 1 will store logins data
-const string RegisterLogInFile = "RegisterLogInFile.txt";
+const string RegisterLogInFile = "data/RegisterLogInFile.txt";
 
 class clsBankUsers : public clsPerson  {
 

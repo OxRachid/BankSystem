@@ -766,12 +766,15 @@ public:
 			 }
 		else --date._mon;
 		
-	short DaysInPrvMonth=NumberOfDaysinMonth(date._year, (eMonths) date._mon);
-	if ( date._day > DaysInPrvMonth )
-		date._day=DaysInPrvMonth;
+	    short DaysInPrvMonth=NumberOfDaysinMonth(date._year, (eMonths) date._mon);
+        if ( date._day > DaysInPrvMonth )
+        	{
+	        	date._day=DaysInPrvMonth;
+        	}
 		
 		return date;
 	}
+	
 	
 	clsDate DecreaseDatebyOneMonth()
 	{

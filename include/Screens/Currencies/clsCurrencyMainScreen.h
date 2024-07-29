@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include "../../Lib/clsEnputValidate.h"
-#include "../clsScreen.h"
+#include "clsEnputValidate.h"
+#include "clsScreen.h"
 #include "clsCurrenciesList.h"
 #include "clsFindCurrency.h"
 #include "clsUpdateCurrencyRate.h"
@@ -52,7 +52,7 @@ private :
 	static void _GoBackToCurrencyMainMenu()
 	{
 		cout<<endl;
-		system("pause");
+		cin.get();
 		CurrencyMainMenu();
 	}
 	

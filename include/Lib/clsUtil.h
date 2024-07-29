@@ -52,6 +52,8 @@ public:
 				}
 				default : break;
 			}
+			// Just temprary
+			return typeofletters::D_letters;
 	}
 	
 	static string GenerateWord(typeofletters x, int s)

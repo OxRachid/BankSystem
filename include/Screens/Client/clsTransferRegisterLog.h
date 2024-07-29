@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../../Lib/clsEnputValidate.h"
-#include "../clsScreen.h"
-#include "../../Core/clsBankClient.h"
+#include "clsEnputValidate.h"
+#include "clsScreen.h"
+#include "clsBankClient.h"
 using namespace std;
 
 class clsTransferRegisterLog : protected clsScreen {

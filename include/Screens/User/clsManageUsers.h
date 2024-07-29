@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "../../Lib/clsEnputValidate.h"
-#include "../clsScreen.h"
+#include "clsEnputValidate.h"
+#include "clsScreen.h"
 #include "clsListUsers.h"
 #include "clsAddNewUser.h"
 #include "clsDeleteUser.h"
@@ -28,7 +28,7 @@ private :
 	static void _GoBackToManageUserMenu()
 	{
 		cout<<endl;
-		system("pause");
+		cin.get();
 		ManageUserMenu();
 	}
 
@@ -113,7 +113,7 @@ public :
 		// Check access permission
 		if (!clsScreen::CheckAccess(clsBankUsers::enPermissions::pManageUsers))
 		{
-			system("pause");
+			cin.get();
 			return;
 		}
 		
