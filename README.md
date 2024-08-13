@@ -1,4 +1,2 @@
 # Bank-System-Testing-
-First Project for Testing 
-## Work succesfuly
-# mice
+BankSystem project ★ learner ★
