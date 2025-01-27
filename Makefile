@@ -1,4 +1,3 @@
-include ColorConfig
 
 # Compiler
 CXX = g++
@@ -9,7 +8,7 @@ CXXFLAGS = -Wall -Og
 # Directories
 SRC_DIR = src
 DATA_DIR = data
-INC_DIR = include
+INC_DIR = headers
 
 # Find all subdirectories under the INC_DIR directory and generate the necessary compiler flags (-I) in prefix of each directory
 ALL_INCDIRS = $(shell find $(INC_DIR) -type d | sed 's|^|-I|' | tr '\n' ' ')
@@ -22,7 +21,7 @@ OUTPUT_DIR = Output_Dir
 EXC_NAME = MyProgramRun
 
 # store list of all Sources files (.cpp) in varaible
-CPPFILES = $(foreach d, $(SRC_DIR), $(wildcard $(d)/*.cpp))
+CPPFILES = $(shell find $(SRC_DIR) -name "*.cpp")
 
 # store List all Non-source files like (.txt) files in varaible
 TEXTFILES = $(foreach d, $(DATA_DIR), $(wildcard $(d)/*.txt))
@@ -39,29 +38,55 @@ all: $(OUTPUT_DIR)/$(EXC_NAME) copy_data
 $(OUTPUT_DIR)/$(EXC_NAME): $(OBJECTS) 
 	@mkdir -p $(OUTPUT_DIR)
 	$(CXX) $^ -o $@
-	@echo -e "$(BRIGHT_BLUE)Linking completed ☑$(RESET)"
+	@echo -e "\033[0;32mLinking completed ✓\033[0m"
 
 # Compile source files to object files (compilation step)
 $(OUTPUT_DIR)/%.o: %.cpp
 	@mkdir -p $(dir $@)
 	$(CXX) $(CXXFLAGS) $(ALL_INCDIRS) -c $< -o $@
-	@echo -e "$(BRIGHT_BLUE)Compile .cpp and .h files completed ☑$(RESET)"
+	@echo -e "\033[0;32mCompile files completed ✓\033[0m"
 
 # Copy all (.txt) file to Outputdir/data
 copy_data:
 	@mkdir -p $(OUTPUT_DIR)/$(DATA_DIR)
 	@cp $(TEXTFILES) $(OUTPUT_DIR)/$(DATA_DIR)
-	@echo -e "$(BRIGHT_BLUE)Copy (.txt) completed ☑$(RESET)"
-	
+	@echo -e "Copy (.txt) completed ☑"
+
+
+
+
+#************* Compile main.cpp **********************************
+
+
+# store all compiled files in varaible
+FilesCompiled = $(shell find $(OUTPUT_DIR) -type f -name '*.o')
+
+
+# linking new main.o with other objects
+main: CompileMainCpp
+	@$(CXX) $(FilesCompiled) -o $(OUTPUT_DIR)/$(EXC_NAME)
+	@echo -e "\033[0;32mlinking of main.cpp completed ✓\033[0m"
+
+# compile update of main.cpp file 
+CompileMainCpp: 
+	@$(CXX) $(CXXFLAGS) -c main.cpp -o $(OUTPUT_DIR)/main.o
+	@echo -e "\033[0;32mCompilation of main.cpp completed ✓\033[0m"
+
+
+#******************************************************************
+
+
+
+
 # varaible for run program by calling make
 Run:
-	./$(OUTPUT_DIR)/$(EXC_NAME)
+	@./$(OUTPUT_DIR)/$(EXC_NAME)
 
 # Clear
 clear:
 	@rm -rf $(OUTPUT_DIR) 
-	@echo -e "$(RED)Clean completed ☑$(RESET)"
+	@echo -e "\033[0;32mClean completed ✓\033[0m"
 	
 
 # add .PHONY so that the non-targetfile - rules work even if a file with the same name exists.
-.PHONY: all clean copy_data
+.PHONY: all clean copy_data main

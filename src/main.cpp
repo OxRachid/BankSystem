@@ -1,26 +1,13 @@
-#include <iostream>
-#include <cmath>
-#include <string>
-#include <algorithm>
-#include <ctime>
-#include <iomanip>
-#include <chrono>
-#include <thread>
-#include "clsBankLogin.h"
+#include "../headers/Core/Globals.h"
+#include "../headers/Screens/Users/clsBankLogin.h"
 using namespace std;
-	
-	
-	
-int main()
-{
-	while ( true )
-	{
-		if ( !clsBankLogin::Login() )
-		{
-			break;
-		}
-	}
 
-	
-	return 0;
+int main() {
+    while (true) {
+        clsBankLogin::LoginScreen();
+        if (CurrUser.isEmpty()) {
+            break;
+        }
+    }
+    return 0;
 }
